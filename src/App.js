@@ -1,12 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledTitle = styled.h1`
-  text-align: center;
-`;
+import useRoutes from './routes';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  return <StyledTitle>Book Store</StyledTitle>;
+  const routes = useRoutes(false);
+
+  return <Router>{routes}</Router>;
 }
 
 export default App;

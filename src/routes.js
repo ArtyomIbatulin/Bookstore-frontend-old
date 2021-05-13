@@ -15,7 +15,6 @@ const useRoutes = (isAuthenticated) => {
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route path="/wishlist" component={Wishlist} />
-        {/* <Route path="/books" component={MainPage} /> */}
         <Route path="/book/:id" component={BookPage} />
         <Route path="/profile" component={Profile} />
         <Route path="/orders" component={Orders} />
@@ -27,11 +26,10 @@ const useRoutes = (isAuthenticated) => {
 
   return (
     <Switch>
-      {/* <Route exact path="/" component={MainPage} /> */}
       <Route exact path="/" component={MainPage} />
       <Route path="/sign-in" component={SignIn} />
       <Route path="/sign-up" component={SignUp} />
-      {/* <Redirect to="/sign-in" /> */}
+      <Redirect to="/" />
     </Switch>
   );
 };

@@ -28,7 +28,8 @@ const useRoutes = (isAuthenticated) => {
   return (
     <Switch>
       {/* <Route exact path="/" component={MainPage} /> */}
-      <Route exact path="/sign-in" component={SignIn} />
+      <Route exact path="/" component={MainPage} />
+      <Route path="/sign-in" component={SignIn} />
       <Route path="/sign-up" component={SignUp} />
       {/* <Redirect to="/sign-in" /> */}
     </Switch>

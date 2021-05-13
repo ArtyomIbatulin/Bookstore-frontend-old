@@ -6,7 +6,7 @@ import BookPage from './pages/BookPage';
 import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import AdminPage from './pages/AdminPage';
-import SignUp from './pages/signUp/SignUp';
+import SignIn from './pages/signIn/SignIn';
 
 const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -27,8 +27,8 @@ const useRoutes = (isAuthenticated) => {
   return (
     <Switch>
       {/* <Route exact path="/" component={MainPage} /> */}
-      <Route exact path="/sign-up" component={SignUp} />
-      <Redirect to="/sign-up" />
+      <Route exact path="/sign-in" component={SignIn} />
+      <Redirect to="/sign-in" />
     </Switch>
   );
 };

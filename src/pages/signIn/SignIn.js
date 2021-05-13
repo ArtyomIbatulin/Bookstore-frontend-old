@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import MyTextInput from '../../components/MyTextInput';
 import validation from './validation';
+import { Link } from 'react-router-dom';
+
 const initialValues = {
   login: '',
   password: '',
@@ -29,6 +31,7 @@ const SignIn = () => {
           </div>
         </Form>
       </Formik>
+      <Link to="/sign-up">Нет аккаунта? Создать</Link>
     </main>
   );
 };

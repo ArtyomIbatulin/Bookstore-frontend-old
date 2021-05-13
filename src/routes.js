@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import AdminPage from './pages/AdminPage';
 import SignIn from './pages/signIn/SignIn';
+import SignUp from './pages/signUp/SignUp';
 
 const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -28,7 +29,8 @@ const useRoutes = (isAuthenticated) => {
     <Switch>
       {/* <Route exact path="/" component={MainPage} /> */}
       <Route exact path="/sign-in" component={SignIn} />
-      <Redirect to="/sign-in" />
+      <Route path="/sign-up" component={SignUp} />
+      {/* <Redirect to="/sign-in" /> */}
     </Switch>
   );
 };

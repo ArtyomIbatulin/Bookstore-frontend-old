@@ -6,7 +6,7 @@ import BookPage from './pages/BookPage';
 import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import AdminPage from './pages/AdminPage';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/signUp/SignUp';
 
 const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {

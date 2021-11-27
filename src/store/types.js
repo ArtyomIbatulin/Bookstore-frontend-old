@@ -1,1 +1,2 @@
-export const CHANGE_USERS = 'CHANGE_USERS';
+export const CHANGE_USERS = "CHANGE_USERS";
+export const CHANGE_BOOKS_ARRAY = "CHANGE_BOOKS_ARRAY";

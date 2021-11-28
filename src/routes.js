@@ -28,6 +28,7 @@ const useRoutes = (isAuthenticated) => {
     <Switch>
       <Route exact path="/" component={MainPage} />
       <Route path="/wishlist" component={Wishlist} />
+      <Route path="/orders" component={Orders} />
       <Route path="/book/:id" component={BookPage} />
       <Route path="/sign-in" component={SignIn} />
       <Route path="/sign-up" component={SignUp} />

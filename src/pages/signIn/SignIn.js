@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import MyTextInput from "../../components/MyTextInput";
 import validation from "./validation";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const initialValues = {
   login: "",
@@ -11,28 +12,33 @@ const initialValues = {
 
 const SignIn = () => {
   return (
-    <main>
-      <h1>Sign in to the site</h1>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validation}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          setSubmitting(false);
-          resetForm();
-          console.log(values);
-        }}
-      >
-        <Form>
-          <MyTextInput label="Login" name="login" type="text" />
-          <MyTextInput label="Password" name="password" type="password" />
+    <>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <h1>Sign in to the site</h1>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validation}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            setSubmitting(false);
+            resetForm();
+            console.log(values);
+          }}
+        >
+          <Form>
+            <MyTextInput label="Login" name="login" type="text" />
+            <MyTextInput label="Password" name="password" type="password" />
 
-          <div>
-            <button type="submit">SignIn</button>
-          </div>
-        </Form>
-      </Formik>
-      <Link to="/sign-up">Нет аккаунта? Создать</Link>
-    </main>
+            <div>
+              <button type="submit">Login</button>
+            </div>
+          </Form>
+        </Formik>
+        <Link to="/sign-up">Нет аккаунта? Создать</Link>
+      </main>
+    </>
   );
 };
 

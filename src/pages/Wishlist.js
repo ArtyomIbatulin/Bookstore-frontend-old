@@ -1,7 +1,17 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
 
 const Wishlist = () => {
-  return <div>Wishlist</div>;
+  return (
+    <>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <div>Wishlist</div>
+      </main>
+    </>
+  );
 };
 
 export default Wishlist;

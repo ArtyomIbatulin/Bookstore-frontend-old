@@ -1,7 +1,17 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
 
 const Orders = () => {
-  return <div>Orders</div>;
+  return (
+    <>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <div>Orders</div>
+      </main>
+    </>
+  );
 };
 
 export default Orders;
